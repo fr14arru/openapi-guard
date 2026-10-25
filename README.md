@@ -34,12 +34,13 @@ La [guía rápida](docs/github-actions-quickstart.md) incluye un workflow con in
 
 Actualmente se utiliza un paquete local con Action y JAR. Todavía no hay una release pública MIT ni una referencia remota de instalación publicada. Hacer público el repositorio no genera esos artefactos automáticamente.
 
-La apertura se hará con una copia limpia sin historial; el repositorio original se conservará privado. Ver [preparación y comprobaciones](docs/open-source.md#copia-limpia-para-el-nuevo-repositorio).
+El código está publicado en [fr14arru/openapi-guard](https://github.com/fr14arru/openapi-guard), con un historial nuevo y el repositorio original conservado privado. Las dos reglas de main están activas: restringen actualizaciones y bloquean borrados y force pushes. Ver [estado verificado](docs/github-governance.md).
 
 La validación de la copia exportada detectó y corrigió una preparación de test dependiente de LF; la regresión comprueba ahora LF y CRLF explícitamente.
 
 ## Documentación y colaboración
 
+- [Guías de usuario e instalación](https://github.com/fr14arru/OpenAPI-Breaking-Change-Guard-Docs).
 - [Inicio y próximos pasos de código abierto](docs/open-source.md).
 - [Guía para leer el código](docs/code/README.md) y [arquitectura](docs/architecture.md).
 - [Roadmap actual](docs/portal/roadmap.md).

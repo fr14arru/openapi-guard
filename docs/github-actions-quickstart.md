@@ -4,7 +4,19 @@ Con esta receta obtendrás un comentario en la conversación de las PR del mismo
 
 ## 1. Coloca el paquete en tu repositorio
 
-El candidato local rc.2 incluye un kit con una carpeta `.guard-action` y soporte de `pr-comment`; ver [registro de entrega](pilot-delivery.md). Cópiala **completa** a la raíz de tu proyecto de evaluación autorizado, incluido el JAR y `manifest.json`. La carpeta debe llamarse exactamente `.guard-action` para usar el workflow siguiente sin cambios. La [instalación pública por referencia](commercial-launch.md) es el siguiente incremento; todavía no está disponible.
+El código es público bajo MIT en [fr14arru/openapi-guard](https://github.com/fr14arru/openapi-guard). Todavía no hay una release binaria MIT ni una Action por versión publicada; los candidatos históricos rc.2/rc.3 no son la entrega MIT actual. Primero clona el proyecto e instala Java 25 y Maven 3.10.0; para preparar el paquete necesitas Node 20 o superior y PowerShell 7.
+
+Desde la raíz del proyecto:
+
+```powershell
+mvnd clean verify
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-evaluation.ps1 -Destination dist/local-action
+node scripts/verify-package.mjs dist/local-action
+```
+
+Puedes sustituir mvnd por Maven estándar. El destino debe ser nuevo. Bypass afecta solo a ese proceso y no modifica la política global. El empaquetador conserva su nombre histórico, pero incluye MIT, atribuciones y fuentes de terceros; no publica nada.
+
+Copia **todo el contenido** de dist/local-action a .guard-action en la raíz de tu repositorio consumidor. Deben quedar .guard-action/action.yml, .guard-action/guard.jar, manifest.json, scripts y atribuciones. Conserva el paquete completo y no añadas otro nivel de directorio. La carpeta debe llamarse exactamente .guard-action para utilizar el workflow siguiente sin cambios.
 
 Copia también la entrada de `.gitattributes` del kit. Si ya tienes ese archivo, añade esta línea conservando las demás:
 
@@ -14,7 +26,7 @@ Copia también la entrada de `.gitattributes` del kit. Si ya tienes ese archivo,
 
 Así se conservan los bytes y hashes del paquete al hacer checkout en Windows. No edites archivos dentro de `.guard-action`; tu configuración pertenece al workflow.
 
-No necesitas instalar Maven, configurar Java en el workflow ni crear un token personal. La Action prepara Corretto 25 y utiliza el token temporal que proporciona GitHub. Esta es la instalación del **piloto con paquete local**; todavía no hay una versión publicada en Marketplace ni una referencia remota de instalación que podamos recomendar.
+No necesitas instalar Maven, configurar Java en el workflow ni crear un token personal. La Action prepara Corretto 25 y utiliza el token temporal que proporciona GitHub. Esta es la instalación actual mediante **paquete local**; todavía no hay una versión publicada en Marketplace ni una referencia remota de instalación que podamos recomendar.
 
 ## 2. Copia este workflow completo
 
