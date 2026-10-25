@@ -2,7 +2,7 @@
 
 **Estado verificado el 25 de octubre de 2026:** el código está publicado bajo MIT en [fr14arru/openapi-guard](https://github.com/fr14arru/openapi-guard), con un commit raíz nuevo y contacto público. El repositorio original sigue privado. GitHub confirma las dos reglas activas sobre main: actualización restringida, borrados y force pushes bloqueados. Las excepciones y administradores no son visibles mediante la API pública; ver [detalle](github-governance.md). El registro de preparación que sigue conserva las decisiones anteriores, no pendientes de volver a aprobar.
 
-Todavía no hay una release binaria MIT ni una Action instalable por versión publicada. Para usarlo hoy: [guía de compilación](https://github.com/fr14arru/OpenAPI-Breaking-Change-Guard-Docs/blob/main/docs/getting-started.md) y [paquete local para Actions](github-actions-quickstart.md). La copia independiente ha superado 964 pruebas Java, 100 de scripts, 218 ejemplos y Javadoc. Las aportaciones voluntarias siguen pendientes de su URL pública.
+Todavía no hay una release binaria MIT ni una Action instalable por versión publicada. Para usarlo hoy: [guía de compilación](https://github.com/fr14arru/OpenAPI-Breaking-Change-Guard-Docs/blob/main/docs/getting-started.md) y [paquete local para Actions](github-actions-quickstart.md). La copia independiente ha superado 964 pruebas Java, 100 de scripts, 218 ejemplos y Javadoc. El enlace de [aportaciones voluntarias por PayPal](https://paypal.me/fr14arru) está confirmado por el titular. No hay contraprestaciones ni funciones de pago.
 
 El 22 de octubre de 2026 Fran aprueba **MIT** para el código propio y sustituye el modelo de venta por repositorio por uso gratuito y aportaciones voluntarias. No se necesita suscripción, clave de licencia ni activación. MIT permite usar, modificar, redistribuir y vender copias, conservando su aviso. Ver [licencia íntegra](../LICENSE).
 
@@ -20,7 +20,7 @@ Los ZIP rc.2/rc.3 y el paquete de prueba de tienda permanecen inmutables, con su
 2. **Decisión confirmada el 25 de octubre:** publicar una copia limpia sin historial como `openapi-guard` y conservar el repositorio original privado. No cambiar su remoto ni reescribir sus commits. La búsqueda del correo privado de autor no lo encuentra en los archivos de HEAD; sí en los metadatos históricos, que quedan fuera de la copia.
 3. Configurar y comprobar permisos y reglas de main; ver [gobierno del repositorio](github-governance.md). CODEOWNERS no basta.
 4. Generar un candidato MIT desde un commit limpio, comprobar ZIP/hash/ejecución e integrar/publicar con la autorización correspondiente. La Action remota por versión todavía requiere una entrega publicada; mientras tanto funciona el paquete local.
-5. Añadir el enlace público de PayPal cuando Fran lo facilite al cerrar los pasos anteriores. Sin cobro obligatorio ni funciones restringidas.
+5. Enlace público confirmado el 25 de octubre: [PayPal](https://paypal.me/fr14arru). Los README lo muestran como aportación voluntaria; .github/FUNDING.yml configura el botón Sponsor al incorporarse a la rama predeterminada. Si el botón no aparece, comprobar Settings → General → Features → Sponsorships. [Configuración oficial](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository). Sin cobro obligatorio ni funciones restringidas.
 
 No se publican domicilio, NIF ni documentos locales de identificación. Esta transición no declara que MIT o las aportaciones voluntarias resuelvan por sí solos obligaciones fiscales o de privacidad.
 
@@ -30,7 +30,7 @@ Se exporta un commit concreto mediante `git archive` a un ZIP local bajo `dist/p
 
 El registro local `snapshot-verification.json`, junto al ZIP, identifica commit de origen, SHA256 del ZIP y verificaciones. Ese registro es procedencia técnica local; no se incorpora automáticamente a una release. La comprobación busca el correo privado histórico y marcadores comunes de credenciales, verifica ausencia de carpetas privadas y coteja los archivos de atribuciones con su catálogo. Es una comprobación acotada, no una garantía universal de ausencia de secretos.
 
-Antes del primer commit público hay que usar una identidad de autor pública, revisar archivos y reglas de main, y confirmar el destino. Exportar la copia no crea el repositorio remoto ni publica una Action. La instalación por versión y el enlace de aportaciones siguen pendientes.
+Antes del primer commit público hay que usar una identidad de autor pública, revisar archivos y reglas de main, y confirmar el destino. Exportar la copia no crea el repositorio remoto ni publica una Action. La instalación por versión sigue pendiente; el enlace de aportaciones está confirmado arriba.
 
 ## Verificación de esta adaptación
 

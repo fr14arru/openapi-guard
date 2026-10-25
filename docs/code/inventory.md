@@ -2,6 +2,8 @@
 
 # Inventario completo del código y recursos
 
+Aportaciones voluntarias (25 de octubre): .github/FUNDING.yml contiene solo una URL custom de PayPal. Es metadato de GitHub para el botón Sponsor, sin conexión con el motor, la CLI ni las reglas. Los enlaces de README y guías usan la misma URL pública; no se añaden dependencias ni condiciones a MIT.
+
 Regresión de exportación (25 de octubre): `SwaggerContractAnalyzerTest.parserValidationAndDanglingReferencesFailClosed` parametriza LF y CRLF. La eliminación de `info.title` emplea el salto real y comprueba que la mutación cambió el contrato antes de exigir FAILED. Evita que un cambio de finales de línea convierta la entrada inválida en un contrato válido. No modifica el analizador de producción.
 
 Entrega de prueba de tienda (22 de octubre): [scripts/prepare-test-delivery.mjs](../../scripts/prepare-test-delivery.mjs) exporta prepareTestDelivery; su helper approvedLicense comprueba el blob aprobado y extrae las cláusulas, separando procedencia del motor y commit de empaquetado. [scripts/test-delivery.test.mjs](../../scripts/test-delivery.test.mjs) utiliza fixture/persist para paquetes sintéticos y prueba preservación, entradas alteradas, filtrado de documentos, licencia/fuentes, destinos existentes y transporte ZIP. docs/test-delivery-readme.txt contiene las instrucciones autónomas incluidas. No se leen los borradores privados para empaquetar.

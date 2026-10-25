@@ -48,4 +48,10 @@ La validación de la copia exportada detectó y corrigió una preparación de te
 - [Contribuir mediante fork y PR](CONTRIBUTING.md) y [gobierno de main](docs/github-governance.md).
 - [Atribuciones y fuentes de terceros](docs/third-party-review.md).
 
-Contacto público: rayopuyi5@gmail.com. Las aportaciones económicas serán voluntarias y no desbloquearán funciones; el enlace todavía está pendiente. Los documentos comerciales anteriores se conservan como historial y no son condiciones de esta distribución MIT.
+Contacto público: rayopuyi5@gmail.com. Los documentos comerciales anteriores se conservan como historial y no son condiciones de esta distribución MIT.
+
+## Apoyar el proyecto
+
+Si la herramienta te resulta útil, puedes hacer una [aportación voluntaria por PayPal](https://paypal.me/fr14arru). Tú eliges el importe.
+
+El proyecto sigue siendo gratuito bajo MIT. Aportar no desbloquea funciones ni otorga prioridad o garantías de soporte.
