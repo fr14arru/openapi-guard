@@ -1,0 +1,15 @@
+openapi: 3.0.3
+info: {title: Arrays example, version: '1'}
+paths:
+  /values:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema: {type: array, items: {type: number}, maxItems: 10}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {type: array, items: {type: integer}, maxItems: 10}

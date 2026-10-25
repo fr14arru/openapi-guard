@@ -1,0 +1,1274 @@
+[
+  {
+    "id": "query-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "query-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "query-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "query-optional-to-absent",
+    "baseline": "query-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-optional-to-optional",
+    "baseline": "query-optional.json",
+    "candidate": "query-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-optional-to-required",
+    "baseline": "query-optional.json",
+    "candidate": "query-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "query-required-to-absent",
+    "baseline": "query-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-required-to-optional",
+    "baseline": "query-required.json",
+    "candidate": "query-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-required-to-required",
+    "baseline": "query-required.json",
+    "candidate": "query-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "header-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "header-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "header-optional-to-absent",
+    "baseline": "header-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-optional-to-optional",
+    "baseline": "header-optional.json",
+    "candidate": "header-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-optional-to-required",
+    "baseline": "header-optional.json",
+    "candidate": "header-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "header-required-to-absent",
+    "baseline": "header-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-required-to-optional",
+    "baseline": "header-required.json",
+    "candidate": "header-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-required-to-required",
+    "baseline": "header-required.json",
+    "candidate": "header-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "cookie-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "cookie-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "cookie-optional-to-absent",
+    "baseline": "cookie-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-optional-to-optional",
+    "baseline": "cookie-optional.json",
+    "candidate": "cookie-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-optional-to-required",
+    "baseline": "cookie-optional.json",
+    "candidate": "cookie-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "cookie-required-to-absent",
+    "baseline": "cookie-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-required-to-optional",
+    "baseline": "cookie-required.json",
+    "candidate": "cookie-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-required-to-required",
+    "baseline": "cookie-required.json",
+    "candidate": "cookie-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "inherited-required",
+    "baseline": "query-optional.json",
+    "candidate": "inherited-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "local-overrides-inherited",
+    "baseline": "query-optional.json",
+    "candidate": "local-override.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "empty-local-list-keeps-inheritance",
+    "baseline": "inherited-required.json",
+    "candidate": "empty-local-list.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "explicit-defaults",
+    "baseline": "query-optional.json",
+    "candidate": "explicit-defaults.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "serialization-changed",
+    "baseline": "query-optional.json",
+    "candidate": "serialization-changed.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_SERIALIZATION_REQUIRES_REVIEW"
+  },
+  {
+    "id": "object-presence-unsupported",
+    "baseline": "empty.json",
+    "candidate": "object-required.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_PRESENCE_UNSUPPORTED"
+  },
+  {
+    "id": "object-identity-still-partial",
+    "baseline": "object-required.json",
+    "candidate": "object-required.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_PRESENCE_UNSUPPORTED"
+  },
+  {
+    "id": "array-presence-unsupported",
+    "baseline": "empty.json",
+    "candidate": "array-required.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_PRESENCE_UNSUPPORTED"
+  },
+  {
+    "id": "array-identity-still-partial",
+    "baseline": "array-required.json",
+    "candidate": "array-required.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_PRESENCE_UNSUPPORTED"
+  },
+  {
+    "id": "content-presence-unsupported",
+    "baseline": "empty.json",
+    "candidate": "content-required.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_PRESENCE_UNSUPPORTED"
+  },
+  {
+    "id": "special-header-accept",
+    "baseline": "empty.json",
+    "candidate": "special-accept.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "special-header-content-type",
+    "baseline": "empty.json",
+    "candidate": "special-content-type.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "special-header-authorization",
+    "baseline": "empty.json",
+    "candidate": "special-authorization.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-casing-is-equivalent",
+    "baseline": "header-required.json",
+    "candidate": "header-uppercase.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-casing-is-a-rename",
+    "baseline": "query-optional.json",
+    "candidate": "query-uppercase.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "inline-ref-equivalent",
+    "baseline": "query-optional.json",
+    "candidate": "internal-ref.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "referenced-required",
+    "baseline": "query-optional.json",
+    "candidate": "internal-ref-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "invalid-duplicate",
+    "baseline": "empty.json",
+    "candidate": "invalid-duplicate.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-header-duplicate",
+    "baseline": "empty.json",
+    "candidate": "invalid-header-duplicate.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-invalid-required",
+    "baseline": "empty.json",
+    "candidate": "invalid-required.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-unknown-location",
+    "baseline": "empty.json",
+    "candidate": "invalid-unknown-location.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-missing-reference",
+    "baseline": "empty.json",
+    "candidate": "invalid-missing-reference.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-external-reference",
+    "baseline": "empty.json",
+    "candidate": "invalid-external-reference.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-null-parameters",
+    "baseline": "empty.json",
+    "candidate": "invalid-null-parameters.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-both-schema-content",
+    "baseline": "empty.json",
+    "candidate": "invalid-both-schema-content.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-cyclic",
+    "baseline": "empty.json",
+    "candidate": "invalid-cyclic.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "endpoint-removal",
+    "baseline": "empty.json",
+    "candidate": "endpoint-removed.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "ENDPOINT_REMOVED"
+    ]
+  },
+  {
+    "id": "method-removal",
+    "baseline": "empty.json",
+    "candidate": "method-removed.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "HTTP_METHOD_REMOVED"
+    ]
+  },
+  {
+    "id": "operation-addition",
+    "baseline": "endpoint-removed.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "parameter-rules-suppressed-with-removed-operation",
+    "baseline": "query-required.json",
+    "candidate": "endpoint-removed.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "ENDPOINT_REMOVED"
+    ]
+  },
+  {
+    "id": "response-required-is-excluded",
+    "baseline": "empty.json",
+    "candidate": "response-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cross-family-rejected",
+    "baseline": "empty.json",
+    "candidate": "empty-31.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "UNSUPPORTED_VERSION_PAIR"
+  },
+  {
+    "id": "31-new-required",
+    "baseline": "empty-31.json",
+    "candidate": "required-31.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "path-required-identity",
+    "baseline": "path-valid.json",
+    "candidate": "path-valid.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "invalid-path-optional",
+    "baseline": "path-valid.json",
+    "candidate": "invalid-path-optional.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "invalid-path-missing",
+    "baseline": "path-valid.json",
+    "candidate": "invalid-path-missing.json",
+    "status": "FAILED",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "INVALID_OR_UNSUPPORTED_INPUT"
+  },
+  {
+    "id": "path-template-renamed",
+    "baseline": "path-valid.json",
+    "candidate": "path-renamed.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PATH_MATCH_REQUIRES_REVIEW"
+  },
+  {
+    "id": "parameter-order-equivalent",
+    "baseline": "order-a.json",
+    "candidate": "order-b.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-string-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-string-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "query-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-string-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "query-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "query-string-optional-to-absent",
+    "baseline": "query-string-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-string-optional-to-optional",
+    "baseline": "query-string-optional.json",
+    "candidate": "query-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-string-optional-to-required",
+    "baseline": "query-string-optional.json",
+    "candidate": "query-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "query-string-required-to-absent",
+    "baseline": "query-string-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-string-required-to-optional",
+    "baseline": "query-string-required.json",
+    "candidate": "query-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-string-required-to-required",
+    "baseline": "query-string-required.json",
+    "candidate": "query-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-string-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-string-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "header-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-string-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "header-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "header-string-optional-to-absent",
+    "baseline": "header-string-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-string-optional-to-optional",
+    "baseline": "header-string-optional.json",
+    "candidate": "header-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-string-optional-to-required",
+    "baseline": "header-string-optional.json",
+    "candidate": "header-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "header-string-required-to-absent",
+    "baseline": "header-string-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-string-required-to-optional",
+    "baseline": "header-string-required.json",
+    "candidate": "header-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-string-required-to-required",
+    "baseline": "header-string-required.json",
+    "candidate": "header-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-string-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-string-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "cookie-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-string-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "cookie-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "cookie-string-optional-to-absent",
+    "baseline": "cookie-string-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-string-optional-to-optional",
+    "baseline": "cookie-string-optional.json",
+    "candidate": "cookie-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-string-optional-to-required",
+    "baseline": "cookie-string-optional.json",
+    "candidate": "cookie-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "cookie-string-required-to-absent",
+    "baseline": "cookie-string-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-string-required-to-optional",
+    "baseline": "cookie-string-required.json",
+    "candidate": "cookie-string-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-string-required-to-required",
+    "baseline": "cookie-string-required.json",
+    "candidate": "cookie-string-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-number-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-number-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "query-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-number-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "query-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "query-number-optional-to-absent",
+    "baseline": "query-number-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-number-optional-to-optional",
+    "baseline": "query-number-optional.json",
+    "candidate": "query-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-number-optional-to-required",
+    "baseline": "query-number-optional.json",
+    "candidate": "query-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "query-number-required-to-absent",
+    "baseline": "query-number-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-number-required-to-optional",
+    "baseline": "query-number-required.json",
+    "candidate": "query-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-number-required-to-required",
+    "baseline": "query-number-required.json",
+    "candidate": "query-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-number-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-number-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "header-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-number-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "header-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "header-number-optional-to-absent",
+    "baseline": "header-number-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-number-optional-to-optional",
+    "baseline": "header-number-optional.json",
+    "candidate": "header-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-number-optional-to-required",
+    "baseline": "header-number-optional.json",
+    "candidate": "header-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "header-number-required-to-absent",
+    "baseline": "header-number-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-number-required-to-optional",
+    "baseline": "header-number-required.json",
+    "candidate": "header-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-number-required-to-required",
+    "baseline": "header-number-required.json",
+    "candidate": "header-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-number-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-number-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "cookie-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-number-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "cookie-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "cookie-number-optional-to-absent",
+    "baseline": "cookie-number-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-number-optional-to-optional",
+    "baseline": "cookie-number-optional.json",
+    "candidate": "cookie-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-number-optional-to-required",
+    "baseline": "cookie-number-optional.json",
+    "candidate": "cookie-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "cookie-number-required-to-absent",
+    "baseline": "cookie-number-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-number-required-to-optional",
+    "baseline": "cookie-number-required.json",
+    "candidate": "cookie-number-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-number-required-to-required",
+    "baseline": "cookie-number-required.json",
+    "candidate": "cookie-number-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-boolean-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-boolean-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "query-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-boolean-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "query-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "query-boolean-optional-to-absent",
+    "baseline": "query-boolean-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-boolean-optional-to-optional",
+    "baseline": "query-boolean-optional.json",
+    "candidate": "query-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-boolean-optional-to-required",
+    "baseline": "query-boolean-optional.json",
+    "candidate": "query-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "query-boolean-required-to-absent",
+    "baseline": "query-boolean-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "query-boolean-required-to-optional",
+    "baseline": "query-boolean-required.json",
+    "candidate": "query-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "query-boolean-required-to-required",
+    "baseline": "query-boolean-required.json",
+    "candidate": "query-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-boolean-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-boolean-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "header-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-boolean-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "header-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "header-boolean-optional-to-absent",
+    "baseline": "header-boolean-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-boolean-optional-to-optional",
+    "baseline": "header-boolean-optional.json",
+    "candidate": "header-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-boolean-optional-to-required",
+    "baseline": "header-boolean-optional.json",
+    "candidate": "header-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "header-boolean-required-to-absent",
+    "baseline": "header-boolean-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "header-boolean-required-to-optional",
+    "baseline": "header-boolean-required.json",
+    "candidate": "header-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "header-boolean-required-to-required",
+    "baseline": "header-boolean-required.json",
+    "candidate": "header-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-boolean-absent-to-absent",
+    "baseline": "empty.json",
+    "candidate": "empty.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-boolean-absent-to-optional",
+    "baseline": "empty.json",
+    "candidate": "cookie-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-boolean-absent-to-required",
+    "baseline": "empty.json",
+    "candidate": "cookie-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "REQUIRED_PARAMETER_ADDED"
+    ]
+  },
+  {
+    "id": "cookie-boolean-optional-to-absent",
+    "baseline": "cookie-boolean-optional.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-boolean-optional-to-optional",
+    "baseline": "cookie-boolean-optional.json",
+    "candidate": "cookie-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-boolean-optional-to-required",
+    "baseline": "cookie-boolean-optional.json",
+    "candidate": "cookie-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "BREAKING",
+    "rules": [
+      "PARAMETER_BECAME_REQUIRED"
+    ]
+  },
+  {
+    "id": "cookie-boolean-required-to-absent",
+    "baseline": "cookie-boolean-required.json",
+    "candidate": "empty.json",
+    "status": "PARTIAL",
+    "verdict": "INDETERMINATE",
+    "rules": [],
+    "diagnostic": "PARAMETER_REMOVAL_REQUIRES_REVIEW"
+  },
+  {
+    "id": "cookie-boolean-required-to-optional",
+    "baseline": "cookie-boolean-required.json",
+    "candidate": "cookie-boolean-optional.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  },
+  {
+    "id": "cookie-boolean-required-to-required",
+    "baseline": "cookie-boolean-required.json",
+    "candidate": "cookie-boolean-required.json",
+    "status": "COMPLETED",
+    "verdict": "COMPATIBLE",
+    "rules": []
+  }
+]

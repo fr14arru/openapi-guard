@@ -1,0 +1,9 @@
+/target/
+/dist/
+/.idea/
+*.iml
+/website/node_modules/
+/website/.docusaurus/
+/website/.generated/
+/website/build/
+/website/.pnpm-store/

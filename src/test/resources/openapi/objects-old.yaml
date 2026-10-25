@@ -1,0 +1,24 @@
+openapi: 3.0.3
+info: {title: Objects, version: '1'}
+paths:
+  /objects:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                name: {type: string}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [name]
+                properties:
+                  name: {type: string}

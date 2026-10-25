@@ -1,0 +1,11 @@
+openapi: 3.0.3
+info: {title: Response policy example, version: '1'}
+paths:
+  /values:
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json: {schema: {type: string}}
+        '204': {description: Empty}

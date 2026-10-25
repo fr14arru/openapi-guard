@@ -1,0 +1,15 @@
+openapi: 3.0.3
+info: {title: Values, version: '1'}
+paths:
+  /values:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema: {type: string, enum: [a, b]}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {type: integer}

@@ -1,0 +1,38 @@
+name: OpenAPI pilot
+on:
+  pull_request:
+  merge_group:
+    types: [checks_requested]
+permissions:
+  contents: read
+concurrency:
+  group: guard-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  guard:
+    name: OpenAPI contract guard
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - id: guard
+        uses: ./.guard-action
+        with:
+          contracts-root: contracts
+          # Use 'false' to allow deliberate breaks while retaining their report.
+          fail-on-breaking: 'true'
+          # To enable, also add pull-requests: write under permissions above.
+          pr-comment: 'false'
+      - name: Retain comparison reports
+        if: always() && steps.guard.outputs.report-path != ''
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: openapi-guard-reports
+          if-no-files-found: error
+          retention-days: 7
+          path: |
+            ${{ steps.guard.outputs.report-path }}
+            ${{ steps.guard.outputs.summary-path }}

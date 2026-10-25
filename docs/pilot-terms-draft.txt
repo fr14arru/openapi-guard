@@ -1,0 +1,76 @@
+OPENAPI BREAKING CHANGE GUARD - BORRADOR COMERCIAL Y DE EVALUACIÓN
+Revisión del titular pendiente. No es una licencia efectiva ni un contrato.
+Actualizado: 22 de octubre de 2026.
+
+Este documento sustituye la propuesta de piloto privado con venta manual.
+Propone evaluación pública y contratación en autoservicio. Ningún pago,
+publicación, renovación o permiso de redistribución se activa por este texto.
+
+1. PARTES Y ACEPTACIÓN
+Proveedor propuesto: Francisco Arce Ruiz, confirmado por su titular.
+Opera en nombre propio desde España. Se admite uso profesional y personal.
+Domicilio/datos legales necesarios: pendientes.
+Contacto público de soporte: rayopuyi5@gmail.com, confirmado por su titular.
+Cliente: persona o entidad identificada en la contratación.
+Plataforma elegida para preparar ventas: Lemon Squeezy.
+Fran comunica cuenta activada y producto de prueba el 21 de octubre; checkout, vendedor y entrega pendientes de verificar.
+Separar los términos del proveedor de software de los de la plataforma de venta.
+Registrar la versión aceptada y entregar una copia de condiciones al comprador.
+
+2. EVALUACIÓN PROPUESTA
+Permiso propuesto de 30 días para evaluar internamente la herramienta, incluidos
+entornos de empresa, sin tarjeta ni necesidad de contactar con el proveedor.
+Duración confirmada: 30 días naturales desde el primer uso. Una nueva descarga no reinicia el plazo. No hay mecanismo
+de caducidad implementado ni licencia efectiva de evaluación todavía.
+
+3. LICENCIA COMERCIAL PROPUESTA
+Permiso no exclusivo de uso propio, profesional o personal, en un repositorio durante la suscripción,
+para todos sus colaboradores, sin límite de ejecuciones cobrado por Guard. Se permite trasladar la licencia cesando su uso en el repositorio anterior. Revisar
+la redacción completa en docs/product-license-draft.md antes de aprobar el texto final.
+El producto propio conservaría titularidad del proveedor. Los componentes de
+terceros mantienen licencias y derechos independientes, incluidos acceso al
+fuente y redistribución cuando sus licencias lo permitan. No restringirlos.
+La licencia de la Action pública se decide aparte de la del motor.
+
+4. PRECIO Y SUSCRIPCIÓN
+Precio confirmado por Fran: 4,99 EUR al año por repositorio, un cobro anual.
+El total de 4,99 EUR incluye impuestos. El checkout debe mostrar ese total,
+renovación, cancelación y vendedor antes del pago. No hay cobro activado.
+Prever cancelación en autoservicio y ausencia de cobros futuros tras el periodo
+vigente. Definir acceso posterior, impagos, devoluciones y derechos obligatorios
+según comprador y jurisdicción. No presumir una renuncia de derechos.
+Para consumidores se conserva el desistimiento aplicable y los remedios por
+falta de conformidad. No se aplica pérdida automática de derechos por descarga.
+Cancelación, desistimiento y reclamación por defecto son mecanismos distintos.
+
+5. ALCANCE Y SOPORTE
+CLI e integración CI con el perfil publicado; no certifica toda el API ni
+seguridad, implementación, comportamiento o clientes reales. La incertidumbre
+requiere revisión humana. El cliente decide qué cambios mergea.
+Documentación y canal asíncrono de incidencias; no se ofrece SLA, consultoría,
+onboarding individual ni desarrollos a medida. Precisar versión/runner soportados
+y procedimiento de fin de servicio antes de contratar. No prometer mantenimiento
+cero ni actualizaciones perpetuas.
+Estas limitaciones no excluyen actualizaciones necesarias ni otros derechos
+imperativos del consumidor. La evaluación gratuita no los sustituye.
+
+6. DATOS
+Los contratos se analizan en el entorno del cliente o runner, sin subida obligada
+al proveedor. Compartir ejemplos de soporte es voluntario; preferir datos
+sintéticos o sanitizados. Describir por separado datos de compra, retención,
+responsables y política de privacidad de la plataforma elegida.
+Si se incorpora activación remota, describir datos, finalidad y disponibilidad
+antes de habilitarla. Hoy no existe ni se verifica la suscripción.
+
+7. CIERRE ANTES DE PUBLICAR
+Completar identidad, autorizaciones del titular, atribuciones/licencias de
+terceros, fuentes EPL, consentimiento/renovación, cancelación, remedios,
+responsabilidad, ley aplicable y obligaciones que correspondan al cliente real.
+No asumir exclusiones de garantía o límites de responsabilidad ausentes.
+Revisar el texto efectivo para las partes y modalidad de venta elegidas.
+
+DECISIONES CONFIRMADAS EL 22 DE OCTUBRE
+Cancelación sin renovación; uso hasta terminar el año pagado. Después renovar
+o cesar el uso del motor. Versiones publicadas durante la suscripción y soporte
+por correo, sin SLA ni promesas de funcionalidades. No se añade activación ni
+verificación técnica. Estas decisiones no aprueban el texto legal completo.

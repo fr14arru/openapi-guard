@@ -1,0 +1,68 @@
+name: OpenAPI contract validation
+
+on:
+  pull_request:
+    branches: [main]
+  merge_group:
+    types: [checks_requested]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: openapi-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract-guard:
+    name: OpenAPI contract guard
+    runs-on: windows-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.merge_group.base_sha }}
+    steps:
+      # Default checkout is the proposed merge, not only the PR head.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6
+        with:
+          distribution: corretto
+          java-version: '25'
+      - name: Set up Apache Maven 3.10.0
+        run: ./scripts/setup-maven.ps1
+      - name: Build and verify engine
+        run: |
+          mvn --batch-mode clean verify
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Verify Git integration
+        run: |
+          node --test scripts/git-contracts.test.mjs scripts/github-workflow.test.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node --test scripts/github-presentation.test.mjs scripts/pr-comment.test.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node --test scripts/launcher.test.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node --test scripts/action-runner.test.mjs scripts/evaluation-package.test.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node --test scripts/package-integrity.test.mjs scripts/pilot-kit.test.mjs scripts/candidate-build.test.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./scripts/javadoc.ps1 -SkipBuild
+          ./scripts/test-ci.ps1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Compare tracked contracts
+        run: |
+          node scripts/git-contracts.mjs --base "$env:BASE_SHA" --candidate "$env:GITHUB_SHA"
+          exit $LASTEXITCODE
+      - name: Retain comparison reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: openapi-contract-reports
+          path: target/git-guard/
+          if-no-files-found: warn
+          retention-days: 7

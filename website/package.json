@@ -1,0 +1,23 @@
+{
+  "name": "openapi-guard-documentation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portal local de documentación y revisión del motor OpenAPI",
+  "scripts": {
+    "prepare:content": "node scripts/prepare-content.mjs",
+    "test": "node --test scripts/content.test.mjs",
+    "test:build": "node --test scripts/site-build.test.mjs",
+    "verify:cases": "pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/verify-cases.ps1",
+    "start": "node scripts/prepare-content.mjs && docusaurus start --host 127.0.0.1 --no-open",
+    "build": "node scripts/prepare-content.mjs && docusaurus build",
+    "serve": "docusaurus serve --host 127.0.0.1 --no-open"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/theme-mermaid": "3.10.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "engines": { "node": ">=20" }
+}

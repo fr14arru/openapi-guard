@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info: {title: Synthetic SaaS catalog, version: '2'}
+paths:
+  /products:
+    get:
+      parameters:
+        - {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 100}}
+      responses:
+        '200':
+          description: Products
+          content:
+            application/json:
+              schema: {type: array, maxItems: 200, items: {$ref: '#/components/schemas/Product'}}
+  /orders:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/CreateOrder'}
+      responses:
+        '201':
+          description: Created order
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Order'}
+        '400':
+          description: Invalid order
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+  /orders/{orderId}:
+    get:
+      parameters:
+        - {name: orderId, in: path, required: true, schema: {type: string}}
+      responses:
+        '200':
+          description: Order
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Order'}
+components:
+  schemas:
+    Product:
+      type: object
+      additionalProperties: false
+      required: [id, title, price]
+      properties:
+        id: {type: string, readOnly: true}
+        title: {type: string, minLength: 1}
+        price: {type: number, minimum: 0}
+    CreateOrder:
+      type: object
+      additionalProperties: false
+      required: [productId, quantity]
+      properties:
+        productId: {type: string, minLength: 1}
+        quantity: {type: integer, minimum: 1, maximum: 10}
+    Order:
+      type: object
+      additionalProperties: false
+      required: [id, status, lines]
+      properties:
+        id: {type: string, readOnly: true}
+        status: {type: string, enum: [PENDING, PAID, CANCELLED]}
+        lines: {type: array, maxItems: 50, items: {$ref: '#/components/schemas/Line'}}
+    Line:
+      type: object
+      additionalProperties: false
+      required: [productId, quantity]
+      properties:
+        productId: {type: string}
+        quantity: {type: integer, minimum: 1}
+    Error:
+      type: object
+      required: [code]
+      properties:
+        code: {type: string}
+        message: {type: string}

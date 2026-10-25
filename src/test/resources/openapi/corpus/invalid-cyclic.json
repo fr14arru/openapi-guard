@@ -1,0 +1,30 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Synthetic corpus",
+    "version": "1"
+  },
+  "paths": {
+    "/pets": {
+      "get": {
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Limit"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "Limit": {
+        "$ref": "#/components/parameters/Limit"
+      }
+    }
+  }
+}

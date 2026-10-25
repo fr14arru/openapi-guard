@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info: {title: Parameter presence, version: '2'}
+paths:
+  /pets:
+    parameters:
+      - {name: limit, in: query, required: true, schema: {type: integer}}
+    get:
+      parameters:
+        - {$ref: '#/components/parameters/Trace'}
+      responses:
+        '200': {description: OK}
+    post:
+      parameters: []
+      responses:
+        '201': {description: Created}
+components:
+  parameters:
+    Trace: {name: X-Trace, in: header, required: true, schema: {type: string}}

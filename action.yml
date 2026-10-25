@@ -1,0 +1,67 @@
+name: OpenAPI Breaking Change Guard
+description: Compare tracked OpenAPI contracts with candidate annotations and explicit coverage.
+inputs:
+  base:
+    description: Baseline commit. Defaults to the pull request or merge queue base.
+    required: false
+  candidate:
+    description: Candidate commit. Defaults to the proposed merge GITHUB_SHA.
+    required: false
+  contracts-root:
+    description: Repository-relative directory containing complete OpenAPI contracts.
+    default: contracts
+  fail-on-breaking:
+    description: Set to 'false' to report breaking changes without failing the check. Invalid inputs and review still fail.
+    default: 'true'
+  pr-comment:
+    description: Create or update one PR conversation comment. Requires pull-requests write; forks are skipped.
+    default: 'false'
+  github-token:
+    description: Workflow token used only for the optional PR comment.
+    default: ${{ github.token }}
+  jar-path:
+    description: Pilot JAR path relative to the consumer workspace, or absolute. Otherwise uses bundled guard.jar.
+    required: false
+  jar-sha256:
+    description: Expected SHA256 for a pilot JAR. Required with jar-path; bundled mode reads manifest.json.
+    required: false
+outputs:
+  comment-status:
+    description: disabled, created, updated, skipped-event, skipped-fork, skipped-stale or failed.
+    value: ${{ steps.compare.outputs.comment-status }}
+  check-exit-code:
+    description: Action status after applying fail-on-breaking; exit-code preserves the comparison result.
+    value: ${{ steps.compare.outputs.check-exit-code }}
+  exit-code:
+    description: Engine result (0 compatible in profile, 1 breaking, 2 invalid, 3 review).
+    value: ${{ steps.compare.outputs.exit-code }}
+  report-path:
+    description: Absolute path of the JSON report generated in the consumer workspace.
+    value: ${{ steps.compare.outputs.report-path }}
+  summary-path:
+    description: Absolute path of the Markdown summary.
+    value: ${{ steps.compare.outputs.summary-path }}
+runs:
+  using: composite
+  steps:
+    - name: Set up Java 25
+      uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6
+      with:
+        distribution: corretto
+        java-version: '25'
+    - id: compare
+      name: Compare OpenAPI contracts
+      shell: bash
+      env:
+        GUARD_BASE: ${{ inputs.base }}
+        GUARD_CANDIDATE: ${{ inputs.candidate }}
+        GUARD_ROOT: ${{ inputs.contracts-root }}
+        GUARD_FAIL_ON_BREAKING: ${{ inputs.fail-on-breaking }}
+        GUARD_PR_COMMENT: ${{ inputs.pr-comment }}
+        GUARD_GITHUB_TOKEN: ${{ inputs.github-token }}
+        GUARD_JAR: ${{ inputs.jar-path }}
+        GUARD_JAR_SHA256: ${{ inputs.jar-sha256 }}
+      run: node "$GITHUB_ACTION_PATH/scripts/action-runner.mjs"
+branding:
+  icon: shield
+  color: blue

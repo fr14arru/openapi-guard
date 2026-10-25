@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "/health": { "get": { "responses": { "200": { "description": "OK" } } } },
+    "/pets": {
+      "post": { "responses": { "201": { "description": "Created" } } },
+      "get": { "responses": { "200": { "description": "OK" } } }
+    }
+  },
+  "info": { "version": "1", "title": "Pets" },
+  "openapi": "3.0.3"
+}

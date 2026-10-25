@@ -1,0 +1,12 @@
+openapi: 3.0.3
+info: {title: Pet creation, version: '2'}
+paths:
+  /pets:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {type: string}
+      responses:
+        '201': {description: Created}
